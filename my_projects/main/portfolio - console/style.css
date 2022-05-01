@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+:root {
+    --light: #16db65;
+    --dark: #020202;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--dark);
+    font-family: 'Chakra Petch', sans-serif;
+    user-select: contain;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection,
+span::selection,
+i::selection {
+    background-color: var(--light);
+    color: var(--dark)
+}
+
+#p-img-cont {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#p-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px var(--light) solid;
+    user-select: none;
+}
+
+main {
+    position: absolute;
+    width: calc(100% - 500px - 100px - 100px);
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 3px var(--light) solid;
+    color: var(--light);
+    padding-left: 100px;
+}
+
+#p-name {
+    margin-top: 50px;
+}
+
+#p-info {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+#p-contact {
+    position: absolute;
+    top: 350px;
+    left: 100px;
+}
+
+#p-bio {
+    position: absolute;
+    left: 100px;
+    top: 500px;
+    width: 75%;
+}
+
+#p-exp {
+    position: absolute;
+    left: 100px;
+    top: 650px;
+    width: 75%;
+}
+
+#p-social {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: x-large;
+    position: absolute;
+    left: -310px;
+    bottom: 50px;
+}
+
+#p-social a {
+    text-decoration: none;
+    color: var(--light)
+}
+
+body {
+    user-select: text;
+}
+
+#resume-link {
+    position: absolute;
+    left: 100px;
+    bottom: 55px;
+    text-decoration: none;
+    color: var(--light)
+}
+
+#resume-link span:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo appear</title>
+</head>
+
+<body>
+
+    <div class="animLogo"><span class="animLogo1">YOUR </span> <span class="animLogoL"></span> <span class="animLogo2"> TEXT</span></div>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .animLogo {
+            font-size: 25px;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 160px;
+            user-select: none;
+            margin: 10px;
+        }
+        
+        .animLogo1 {
+            color: black;
+            animation: slide-top 1s;
+        }
+        
+        .animLogo2 {
+            color: black;
+            animation: slide-bottom 1s;
+        }
+        
+        .animLogoL {
+            width: 2px;
+            height: 25px;
+            background-color: black;
+            animation: appear 2s;
+        }
+        
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slide-top {
+            from {
+                opacity: 0;
+                margin-bottom: -25px;
+            }
+            to {
+                opacity: 1;
+                margin-bottom: 0;
+            }
+        }
+        
+        @keyframes slide-bottom {
+            0% {
+                margin-top: -25px;
+                opacity: 0;
+            }
+            50% {
+                margin-top: -25px;
+                opacity: 0;
+            }
+            100% {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+    </script>
+
+</body>
+
+</html>

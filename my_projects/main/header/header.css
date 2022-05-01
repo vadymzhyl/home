@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+:root {
+    --main: #3d5af1;
+    --main-d: #3651d4;
+    --main-l: #5872f5;
+    --text: #cfcde7;
+}
+
+body {
+    font-family: 'Akshar', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--main);
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+header div img {
+    width: 40px;
+    height: 40px;
+    user-select: none;
+    -webkit-user-drag: none;
+    margin-right: 15px;
+    margin: 0 15px 0 15px;
+}
+
+header div h2 {
+    color: var(--text)
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--text)
+}
+
+header li {
+    height: 100%;
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    z-index: 1;
+    transition: font-size 0.1s ease-in-out;
+}
+
+#active-tab {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    left: 208px;
+    z-index: 0;
+    border-radius: 10px;
+    background-color: var(--main-d);
+    transition: left 0.3s ease-in-out;
+}
+
+#item1:focus {
+    transition: font-size 0.1s ease-in-out;
+}
+
+#item2:focus {
+    transition: font-size 0.1s ease-in-out;
+}
+
+#item3:focus {
+    transition: font-size 0.1s ease-in-out;
+}
+
+#item4:focus i {
+    transition: font-size 0.1s ease-in-out;
+}
+
+header form {
+    position: absolute;
+    right: 25px;
+    height: 50px;
+    top: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--main-l);
+    padding: 0 15px 0 15px;
+    color: var(--text)
+}
+
+#search-text {
+    height: 35px;
+    border: 0;
+    margin-left: 10px;
+    color: var(--text);
+    background-color: transparent;
+    color: var(--text)
+}
+
+#search-text:focus {
+    outline: none;
+}
+
+#search-text::placeholder {
+    color: #c1bee2;
+}

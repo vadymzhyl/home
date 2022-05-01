@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to animate</title>
+</head>
+
+<body class="preload">
+
+    <div class="openTab">
+        <div></div>
+        <div></div>
+    </div>
+
+
+    <style>
+        body {
+            padding: 100px;
+            margin: 0;
+        }
+        
+        body.preload * {
+            animation-duration: 0s !important
+        }
+        
+        .openTab {
+            width: 40px;
+            height: 40px;
+            border: 1px red solid;
+            cursor: pointer;
+        }
+        
+        .openTab div {
+            border-radius: 5px;
+        }
+        
+        .openTab div:nth-child(1) {
+            animation: closeTabLine1 500ms;
+            height: 5px;
+            background-color: black;
+            position: relative;
+            width: 20px;
+            left: 5px;
+            top: 26px;
+            transform: rotate(45deg);
+        }
+        
+        .openTab div:nth-child(2) {
+            animation: closeTabLine2 500ms;
+            height: 5px;
+            background-color: black;
+            position: relative;
+            width: 20px;
+            left: 16px;
+            top: 21px;
+            transform: rotate(-45deg);
+        }
+        
+        .openTab.open {
+            border: 1px blue solid
+        }
+        
+        .openTab.open div:nth-child(1) {
+            animation: openTabLine1 500ms;
+            height: 5px;
+            background-color: black;
+            position: relative;
+            width: 28px;
+            left: 7px;
+            top: 20px;
+            transform: rotate(-45deg);
+        }
+        
+        .openTab.open div:nth-child(2) {
+            animation: openTabLine2 500ms;
+            height: 5px;
+            background-color: black;
+            position: relative;
+            width: 28px;
+            left: 7px;
+            top: 15px;
+            transform: rotate(45deg);
+        }
+        
+        @keyframes openTabLine1 {
+            from {
+                width: 20px;
+                left: 5px;
+                top: 26px;
+                transform: rotate(45deg);
+            }
+            to {
+                width: 28px;
+                left: 7px;
+                top: 20px;
+                transform: rotate(-45deg);
+            }
+        }
+        
+        @keyframes openTabLine2 {
+            from {
+                width: 20px;
+                left: 16px;
+                top: 21px;
+                transform: rotate(-45deg);
+            }
+            to {
+                width: 28px;
+                left: 7px;
+                top: 15px;
+                transform: rotate(45deg);
+            }
+        }
+        
+        @keyframes closeTabLine1 {
+            from {
+                width: 28px;
+                left: 7px;
+                top: 20px;
+                transform: rotate(-45deg);
+            }
+            to {
+                width: 20px;
+                left: 5px;
+                top: 26px;
+                transform: rotate(45deg);
+            }
+        }
+        
+        @keyframes closeTabLine2 {
+            from {
+                width: 28px;
+                left: 7px;
+                top: 15px;
+                transform: rotate(45deg);
+            }
+            to {
+                width: 20px;
+                left: 16px;
+                top: 21px;
+                transform: rotate(-45deg);
+            }
+        }
+    </style>
+
+    <script>
+        const icons = document.querySelectorAll('.openTab');
+        icons.forEach(icon => {
+            icon.addEventListener('click', (event) => {
+                icon.classList.toggle("open");
+            });
+        });
+
+        setTimeout(function() {
+            document.body.className = "";
+        }, 500);
+    </script>
+
+</body>
+
+</html>
